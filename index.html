@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy birthday wnitered</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: 100%;
+            background-image: url(jinx.jpg);
+            background-repeat: no-repeat;
+        }
+        img{
+            height: 15em;
+            width: 15em;
+            padding-bottom: 1em;
+        }
+        button{
+            font-size: 1.75em;
+        }
+        /* Initial styling for the red tint */
+        .red-tint {
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+        }
+        h1,p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">Hapoy birthday wnitedr</h1>
+        <p id="paragraph">open the gift faggot :)</p>
+        <img src="winter.png" alt="gift">
+        <button id="button" onclick="selfDestruct()">Click Me!</button>
+    </div>
+<script>
+    function selfDestruct() {
+      // Update the header text
+      document.getElementById("header").textContent = "Self destruct in 5 seconds";
+
+      // Update the paragraph text
+      document.getElementById("paragraph").textContent = "WHAT DID YOU DO";
+
+      // Add the red tint class to the body element
+      document.body.classList.add("red-tint");
+
+      let countdown = 5;
+      let timer = setInterval(function() {
+        countdown--;
+
+        if (countdown >= 0) {
+          document.getElementById("header").textContent = "Self destruct in " + countdown + " seconds";
+        } else {
+          clearInterval(timer);
+          // Reset the header text after 5 seconds
+          document.getElementById("header").textContent = "Okay i lied, happy bitrthday";
+
+          // Reset the paragraph text after 5 seconds
+          document.getElementById("paragraph").textContent = "here is the steam gift card QTF8B-J29IP-HX4X2";
+
+          // Remove the red tint class from the body element
+          document.body.classList.remove("red-tint");
+        }
+      }, 1000);
+    }
+</script>
+</body>
+</html>
